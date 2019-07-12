@@ -3,8 +3,9 @@ view: facebook_insights {
 
   dimension: id {
     primary_key: yes
+    hidden: yes
     type: string
-    sql: ${TABLE}.id ;;
+    sql: CONCAT(${ad_id}, ${date_start}, ${date_stop}, ${impressions}) ;;
   }
 
   dimension: ad_id {
